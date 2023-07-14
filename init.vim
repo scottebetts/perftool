@@ -22,7 +22,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " Begin plugin section
 
-Plugin 'romain/vim-qf'
+" Plugin 'romain/vim-qf'
 Plugin 'ThePrimeagen/vim-be-good'
 Plugin 'stevearc/oil.nvim'
 Plugin 'preservim/nerdcommenter'
@@ -69,7 +69,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 " powerline config
-set rtp+=$HOME/.pyenv/versions/3.10.1/lib/python3.10/site-packages/powerline/bindings/vim
+" set rtp+=$HOME/.pyenv/versions/3.10.1/lib/python3.10/site-packages/powerline/bindings/vim
 set laststatus=2
 set t_Co=256
 let g:airline_powerline_fonts = 1
@@ -91,7 +91,7 @@ set termencoding=utf-8
 " autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 " autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 let g:loaded_python_provider = 0
-let g:python3_host_prog = '$HOME/.pyenv/versions/3.10.1/bin/python'
+let g:python3_host_prog = '/usr/bin/python3'
 set pyxversion=3
 
 " terraform config
