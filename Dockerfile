@@ -1,6 +1,9 @@
 FROM debian:bookworm-slim AS build1
+
+ENV LC_ALL C.UTF-8
 RUN apt update
 RUN apt -y install strace tcpdump net-tools zsh lsof atop sysstat bpftrace blktrace fatrace lttng-tools bcc autoconf libtool libssl-dev git curl iproute2 openssh-server ethtool tiptop sudo python3 python3-pip python3-neovim wget tmux
+RUN sudo apt remove -y vim vim-runtime gvim vim-tiny vim-common vim-gui-common vim-nox
 
 FROM build1 AS build2
 COPY ./.bashrc /root/
