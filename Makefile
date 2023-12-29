@@ -11,3 +11,10 @@ down:
 
 clean:
 	docker rm $(DOCKER_ID)
+
+build:
+	docker build -t perftool .
+
+rebuild:
+	docker image rm perftool
+	docker build -t perftool .
